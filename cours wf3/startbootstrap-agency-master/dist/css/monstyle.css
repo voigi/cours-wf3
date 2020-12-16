@@ -1,0 +1,28 @@
+@media only screen and (min-width:320px)
+{
+ .fa-inverse
+ {
+   color: blue;
+ }
+ #portfolio img{
+  border-radius: 15px;
+ }
+ #team
+ {
+  display: none;
+ }
+}
+@media only screen and (min-width:768px) and (max-width:1024px)
+{
+
+.fa-bars,.container .btn,#mainNav .navbar-toggler,#mainNav .navbar-nav .nav-item .nav-link
+    {
+        color: orange;
+    }
+h2{
+    color:violet;
+    font-size:5em !important;
+}    
+ 
+ 
+}

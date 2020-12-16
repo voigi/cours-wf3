@@ -1,0 +1,19 @@
+public  abstract  class A {  
+     public  abstract  void ouSuisJe() ;  
+}  
+  
+ public  abstract  class B  extends A {  
+     public  void ouSuisJe() {  
+        System.out.println("Il est passé par ici") ;  
+    }  
+}  
+  
+ public  abstract  class C  extends B {  
+     public  abstract  void ouVasTu() ;  
+}  
+  
+ public  class D  extends C {  
+     public  void ouVasTu() {  
+        System.out.println("J'y retourne") ;  
+    }  
+}

@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class BankAccount {
+            constructor(owner, balance) {
+                this.owner = owner;
+                this.balance = balance;
+            }
+
+            showBalance() {
+                console.log("Solde de départ de " + this.owner + " " + this.balance + " EUR");
+            };
+
+            retrait(amount) {
+                if (amount < this.balance) {
+                    let total = this.balance - amount;
+                    console.log("Nouveau Solde de " + this.owner + " " + total + " EUR");
+                } else {
+                    console.log("Vous etes à decouvert " + this.owner);
+                }
+
+            };
+
+            add(amount) {
+                let total = this.balance + amount;
+                if (total <= 0) {
+                    console.log("Vous etes à decouvert " + this.owner);
+                } else {
+                    console.log("Nouveau Solde de " + this.owner + " " + total + " EUR");
+                }
+            };
+        }
+
+
+        const newAccount = new BankAccount("Will", 500);
+        const newAccount2 = new BankAccount("Joel", 13);
+
+        newAccount.showBalance();
+        newAccount2.showBalance();
+        newAccount.retrait(2000);
+        newAccount2.retrait(13);
+        newAccount.add(2000);
+    </script>
+</body>
+
+</html>
