@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-header">
+      {{ lac.nom }} ( {{ lac.superficie }})
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ lac.typeLac }} <i class="fa fa-tint text-primary"></i></h5>
+      <div class="d-flex flex-wrap">
+        <span *ngIf="lac.pecheAutorisee" class="badge badge-success mt-2 mr-2">Pêche autorisée</span>
+        <span *ngIf="!lac.pecheAutorisee" class="badge badge-danger mt-2 mr-2">Pêche interdite</span>
+        <span *ngIf="lac.navigationAutorisee" class="badge badge-success mt-2 mr-2">Navigation autorisée</span>
+        <span *ngIf="!lac.navigationAutorisee" class="badge badge-danger mt-2 mr-2">Navigation interdite</span>
+        <span *ngIf="!lac.entreePayante" class="badge badge-success mt-2 mr-2">Entrée gratuite</span>
+        <span *ngIf="lac.entreePayante" class="badge badge-warning mt-2 mr-2">Entrée payante : {{ lac.prixEntree }}€ </span>
+      </div>
+
+      <button 
+        type="button" 
+        class="btn btn-danger mt-2"
+        (click)="onClick()">Supprimer</button>
+    </div>
+
+  </div>

@@ -1,0 +1,21 @@
+READ : 
+
+HTTP GET www.meslacs.com/lacs => récupérer tous les lacs en JSON
+
+HTTP GET www.meslacs.com/lacs/<identifiant_lac>
+
+DELETE :
+
+HTTP DELETE www.meslacs.com/lacs/<identifiant_lac>
+HTTP DELETE www.meslacs.com/lacs
+
+CREATE :
+
+HTTP POST www.meslacs.com/lacs + Données du lac en body
+
+UPDATE :
+
+HTTP PUT www.meslacs.com/lacs/<identifiant_lac> + Données mises à jour en body
+HTTP PUT www.meslacs.com/lacs + Données mises à jour pour tous les lacs en body
+
+=> CRUD : 4 opérations (Create, read, update, delete) que l'on peut faire sur des objets

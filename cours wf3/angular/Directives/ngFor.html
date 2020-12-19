@@ -1,0 +1,26 @@
+<div class="row">
+    
+    <ul>
+      <li *ngFor="let prenom of listePrenoms"> {{ prenom }}</li>
+    </ul>
+
+  </div>
+
+<ul>
+    <!-- listPrenoms est un tableau déclaré dans le .TS 
+      prenom est notre variable de boucle (comme un for of en JS)
+    -->
+    <li *ngFor="let prenom of listePrenoms">
+      {{ prenom }}
+      
+      <!-- Exemple de IF / ELSE. Pour le ELSE on demande d'afficher le bloc "pasPierre" -->
+      <span *ngIf="prenom === 'Pierre'; else pasPierre"> C'est pierre </span>
+
+      <!-- Balise affichée uniquement si on ne rentre pas dans le IF (prénom différent de pierre)-->
+      <ng-template #pasPierre> 
+        <h1>Ce n'est pas pierre</h1>
+      </ng-template>
+
+    </li>
+    
+  </ul>
